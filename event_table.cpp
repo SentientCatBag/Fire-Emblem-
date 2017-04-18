@@ -3,12 +3,12 @@
 //each function does exactly what its name says :)
 
 void start_turn(){
-  game->turn++;
-  if (game->turn/2 == ){     //( == a whole number)
-    game->myturn = false;
+  turn++;
+  if (turn/2 == ){     //( == a whole number)
+    myturn = false;
   }
   else {
-    game->myturn = true;
+    myturn = true;
   }
 }
 

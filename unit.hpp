@@ -28,5 +28,5 @@ class unit{
  int[11] * base_stats; //str, def, con, mag, lck, spd, skl, res, mov, hp 
  int[8] * weapon_levels; //bow, lance, sword, axe, tomes, staves
  int[11] * growths;
- //will decide how to implement supports later.
+ int [] * supports; //an array of pointers to other character's IDs who they can support with.
 };

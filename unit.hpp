@@ -17,7 +17,8 @@
 //-        Custom battle sprite – gives the option to use a custom battle sprite/animation, but NOT use a custom class.
 //-        Character abilities – they are all pretty self-explanatory. You can combine values to have multiple skills from one list. For example, to have a character that could use steal and thief key (but not have the class ability to use it), you would do 0x04 + 0x08 = 0x0C.
 //-        Supports Data pointer – a pointer to support data… self-explanatory I suppose. 0x00 means no supports.
- #include <string>
+#include <string>
+#include <fstream>
 
 class unit{
  std::string name;
@@ -28,5 +29,15 @@ class unit{
  int[11] * base_stats; //str, def, con, mag, lck, spd, skl, res, mov, hp 
  int[8] * weapon_levels; //bow, lance, sword, axe, tomes, staves
  int[11] * growths;
- int [] * supports; //an array of pointers to other character's IDs who they can support with.
+ int [] * supports; //an array of pointers to the IDs of the supports they are in
+ 
+ int load_support (unit->portrait, unit->portrait, support->ID){
+  ifstream inf (support->path);
+  if (!inf){
+   std::cerr << "could not load support";
+  }
+  while (inf) {
+   //new std::string line;
+   getline(inf, line);
+  }
 };
